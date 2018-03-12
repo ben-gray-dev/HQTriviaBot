@@ -22,54 +22,12 @@ http://www.pythonware.com/products/pil/
 
 Installation:
 ==============
-PyTesser has no installation functionality in this release.  Extract pytesser.zip
-into directory with other scripts.  Necessary files are listed in Dependencies below.  
+git clone https://github.com/  
 
 
 Usage:
 ================================
->>> from pytesser import *
->>> im = Image.open('phototest.tif')
->>> text = image_to_string(im)
->>> print text
-This is a lot of 12 point text to test the
-ocr code and see if it works on all types
-of file format.
-The quick brown dog jumped over the
-lazy fox. The quick brown dog jumped
-over the lazy fox. The quick brown dog
-jumped over the lazy fox. The quick
-brown dog jumped over the lazy fox.
 
->>> try:
-... 	text = image_file_to_string('fnord.tif', graceful_errors=False)
-... except errors.Tesser_General_Exception, value:
-... 	print "fnord.tif is incompatible filetype.  Try graceful_errors=True"
-... 	print value
-... 	
-fnord.tif is incompatible filetype.  Try graceful_errors=True
-Tesseract Open Source OCR Engine
-read_tif_image:Error:Illegal image format:Compression
-Tessedit:Error:Read of file failed:fnord.tif
-Signal_exit 31 ABORT. LocCode: 3  AbortCode: 3
-
->>> text = image_file_to_string('fnord.tif', graceful_errors=True)
->>> print "fnord.tif contents:", text
-fnord.tif contents: fnord
-
->>> text = image_file_to_string('fonts_test.png', graceful_errors=True)
->>> print text
-12 pt
-And Arnazwngw few dwscotheques provwde jukeboxes
-Tames Amazmgly few dnscotheques pmvxde Jukeboxes
-24 pt:
-Arial: Amazingly few discotheques
-provide jul<ebo><es.
-Courier: Ama zimgly few
-discotheque S provide
-j u k e b ox e S .
-Times: Amazingly few discotheques provide
-jukeboxes.
 
 
 Dependencies:
